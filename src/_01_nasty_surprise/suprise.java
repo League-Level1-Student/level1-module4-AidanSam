@@ -12,31 +12,38 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class suprise {
+public class suprise implements ActionListener{
+	JButton trick = new JButton();
+	JButton treat = new JButton();
 	public void run() {
 		
 
-JButton leftButton = new JButton();
-JButton rightButton = new JButton();
+
 JFrame frame = new JFrame();
 JPanel panel = new JPanel();
 frame.add(panel);
 frame.setVisible(true);
-leftButton.setText("Treat!");
-rightButton.setText("Trick!");
-leftButton.addActionListener(null);
-rightButton.addActionListener(null);
-panel.add(leftButton);
-panel.add(rightButton);
+trick.setText("Trick!");
+trick.addActionListener(this);
+treat.setText("Treat!");
+treat.addActionListener(this);
+panel.add(trick);
+panel.add(treat);
 frame.pack();
 frame.setTitle("Trick Or Treat");
+	}
 
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		JButton pressed = (JButton) e.getSource();
+		if(pressed==trick) {
+			showPictureFromTheInternet("https://i.redd.it/fyd6qa4cciy01.jpg");
+		}
+		if(pressed==treat) {
+			showPictureFromTheInternet("https://i.redd.it/7139c8ldn5b61.jpg");
+			}
 	}
-	public void actionPerformed(ActionEvent arg0) {
-		JButton buttonPressed = (JButton) arg0.getSource();
-		System.out.println("eijiuaewhe");
-	}
-	
 	private void showPictureFromTheInternet(String imageUrl) {
 	    try {
 	        URL url = new URL(imageUrl);
@@ -49,8 +56,5 @@ frame.setTitle("Trick Or Treat");
 	    } catch (MalformedURLException e) {
 	        e.printStackTrace();
 	    }
-	    
 	}
-	
 }
-
