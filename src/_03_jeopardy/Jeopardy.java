@@ -137,7 +137,13 @@ if(buttonPressed==firstButton) {
 		sound.stop();
 		// If the answer is correct
 if(thing.equalsIgnoreCase("2")){
-	prizeMoney =+ 200;
+	prizeMoney += 200;
+	JOptionPane.showMessageDialog(null, "gud job");
+	updateScore();
+} else {
+	prizeMoney += 200;
+	JOptionPane.showMessageDialog(null, "ur bad");
+	updateScore();
 }
 			// Increase the score by the prizeMoney
 
