@@ -39,6 +39,7 @@ frame.setTitle("Trick Or Treat");
 		JButton pressed = (JButton) e.getSource();
 		if(pressed==trick) {
 			showPictureFromTheInternet("https://i.redd.it/fyd6qa4cciy01.jpg");
+			
 		}
 		if(pressed==treat) {
 			showPictureFromTheInternet("https://i.redd.it/7139c8ldn5b61.jpg");

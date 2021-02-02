@@ -6,12 +6,7 @@ import javax.swing.JPanel;
 public class PigLatinRunner {
 	public static void main(String[] args) {
 	
-		JFrame frame = new JFrame();
-		JPanel panel = new JPanel();
-		frame.add(panel);
-		frame.setVisible(true);
-		frame.pack();
-		frame.setTitle("Translator");
+		new PigLatin().run();
 	
 	
 }
