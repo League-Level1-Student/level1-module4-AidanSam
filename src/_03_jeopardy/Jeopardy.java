@@ -116,6 +116,11 @@ if(buttonPressed==firstButton) {
 			// Call the askQuestion() method
  askQuestion("what is 1+1", "2", 200);
 }
+if(buttonPressed==secondButton) {
+	 askQuestion("what is 1+4", "5", 400);
+	
+	
+}
 		// Complete the code in the askQuestion() method. When you play the game, the score should change.
 
 		// If the buttonPressed was the secondButton
