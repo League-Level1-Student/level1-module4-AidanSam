@@ -14,15 +14,37 @@ public class Calculator {
 	JButton subtraction = new JButton();
 	JButton multiplication = new JButton();
 	JButton division = new JButton();
+	JTextField Text1 = new JTextField(20);
+	JTextField Text2 = new JTextField(20);
+	
 	String number1 = JOptionPane.showInputDialog("enter your first number");
 	int num1 = Integer.parseInt(number1);
 	String number2 = JOptionPane.showInputDialog("enter your second number");
 	int num2 = Integer.parseInt(number2);
 	public void run() {
-frame.setSize(400, 400);
+		
+frame.setSize(400, 200);
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 frame.add(panel);
 frame.setVisible(true);
+panel.setLayout(null);
+Text1.setBounds(100,20,165,25);
+Text2.setBounds(100,50,165,25);
+addition.setText("addition");
+addition.setBounds(10, 80, 80, 25);
+subtraction.setText("subtraction");
+subtraction.setBounds(100, 80, 80, 25);
+multiplication.setText("multiply");
+multiplication.setBounds(190, 80, 80, 25);
+division.setText("division");
+division.setBounds(280, 80, 80, 25);
+panel.add(Text1);
+panel.add(Text2);
+panel.add(addition);
+panel.add(subtraction);
+panel.add(multiplication);
+panel.add(division);
+
 		add();
 		subtract();
 		multiply();
