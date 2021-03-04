@@ -1,13 +1,17 @@
 package _08_calculator;
 
 import javax.swing.JOptionPane;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField; 
 
-public class Calculator {
+public class Calculator implements ActionListener{
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel(); 
 	JButton addition = new JButton();
@@ -26,6 +30,10 @@ public class Calculator {
 frame.setSize(400, 200);
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 frame.add(panel);
+addition.addActionListener(this);
+subtraction.addActionListener(this);
+multiplication.addActionListener(this);
+division.addActionListener(this);
 frame.setVisible(true);
 panel.setLayout(null);
 Text1.setBounds(100,20,165,25);
@@ -45,10 +53,6 @@ panel.add(subtraction);
 panel.add(multiplication);
 panel.add(division);
 
-		add();
-		subtract();
-		multiply();
-		divide();
 	}
 	
 	public void add() {
@@ -67,5 +71,21 @@ panel.add(division);
 		double answer =(double) num1 / num2;
 		JOptionPane.showMessageDialog(null, answer);	
 	}
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		JButton pressed = (JButton) e.getSource();
+		if(pressed==addition) {
+			add();
+	}
+		if(pressed==subtraction) {
+			subtract();
+	}
+		if(pressed==multiplication) {
+			multiply();
+	}
+		if(pressed==division) {
+			divide());
+	}
+}
 }
 	
