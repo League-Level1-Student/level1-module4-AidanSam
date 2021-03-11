@@ -26,7 +26,6 @@ public class Calculator implements ActionListener{
 	String number2 = JOptionPane.showInputDialog("enter your second number");
 	int num2 = Integer.parseInt(number2);
 	public void run() {
-		
 frame.setSize(400, 200);
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 frame.add(panel);
@@ -84,7 +83,7 @@ panel.add(division);
 			multiply();
 	}
 		if(pressed==division) {
-			divide());
+			divide();
 	}
 }
 }
