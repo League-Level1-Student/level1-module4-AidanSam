@@ -20,11 +20,8 @@ public class Calculator implements ActionListener{
 	JButton division = new JButton();
 	JTextField Text1 = new JTextField(20);
 	JTextField Text2 = new JTextField(20);
-	
-	String number1 = JOptionPane.showInputDialog("enter your first number");
-	int num1 = Integer.parseInt(number1);
-	String number2 = JOptionPane.showInputDialog("enter your second number");
-	int num2 = Integer.parseInt(number2);
+	int num1 = 1;
+	int num2 = 1;
 	public void run() {
 frame.setSize(400, 200);
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -75,6 +72,10 @@ panel.add(division);
 		JButton pressed = (JButton) e.getSource();
 		if(pressed==addition) {
 			add();
+			String number1 = Text1.getText();
+			int num1 = Integer.parseInt(number1);
+			String number2 = Text2.getText();
+			int num2 = Integer.parseInt(number2);
 	}
 		if(pressed==subtraction) {
 			subtract();
