@@ -5,38 +5,43 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JOptionPane;
 
 public class PigLatin implements ActionListener{
+	String e = JOptionPane.showInputDialog(null);
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
-	JButton translate = new JButton();
+	JButton button = new JButton();
 	JTextField text1 = new JTextField(20);
-	JTextField text2 = new JTextField(20);
+	JLabel text2 = new JLabel();
 	public void run() {
+		JOptionPane.showMessageDialog(null, e);
 		frame.setSize(300, 300);
 		frame.add(panel);
 		frame.setVisible(true);
 		panel.setSize(300, 300);
 		panel.setVisible(true);
-		translate.setBounds(10, 80, 80, 25);
+		button.setBounds(10, 80, 80, 25);
 		frame.setTitle("Translator");
 		text1.setBounds(100,20,165,25);
-		text2.setBounds(100,50,165,25);
-		panel.add(translate);
+		
+		panel.add(button);
 		panel.add(text1);
 		panel.add(text2);
 		frame.pack();
-		translate.addActionListener(this);
+		button.addActionListener(this);
 		
 	}
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stube
 		JButton pressed = (JButton) e.getSource();
-		if(pressed==translate) {
-String translate= text1.getText();
+		if(pressed==button) {
+String latin = translate(text1.getText());
+JOptionPane.showMessageDialog(null, latin);
+text2.setText(latin);
 		}
 	}
 	private static String pigWord(String word) {

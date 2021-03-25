@@ -20,8 +20,8 @@ public class Calculator implements ActionListener{
 	JButton division = new JButton();
 	JTextField Text1 = new JTextField(20);
 	JTextField Text2 = new JTextField(20);
-	int num1 = 1;
-	int num2 = 1;
+	public int num1;
+	public int num2;
 	public void run() {
 frame.setSize(400, 200);
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
