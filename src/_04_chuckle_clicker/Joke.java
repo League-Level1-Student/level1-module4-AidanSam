@@ -12,6 +12,8 @@ public class Joke implements ActionListener{
 	JButton button = new JButton();
 	JButton button1 = new JButton();
 	public void run() {
+		int e = 15%4;
+		JOptionPane.showConfirmDialog(null, e);
 	makeButtons();
 		
 		

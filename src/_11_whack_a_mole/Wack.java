@@ -11,20 +11,17 @@ import javax.swing.JPanel;
 
 public class Wack implements ActionListener {
 	Random ran = new Random();
-
+JButton pointer = new JButton();
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
-     JButton button1 = new JButton();
-     JButton button2 = new JButton();
-     JButton button3 = new JButton();
-     JButton button4 = new JButton();
-     JButton button5 = new JButton();
-     JButton button6 = new JButton();
      
      JButton mole;
      int point = 0;
 public void run() {
 	int num = ran.nextInt(24);
+	panel = new JPanel();
+	pointer.setText(point);
+	panel.add(pointer);
 	for(int i = 0; i<24; i++) {
 		JButton button = new JButton();
 		button.addActionListener(this);
@@ -48,6 +45,7 @@ public void actionPerformed(ActionEvent e) {
 	JButton pressed = (JButton) e.getSource();
 	if(pressed == mole) {
 		point +=1;
+		frame.remove(panel);
 		run();
 		
 	}
