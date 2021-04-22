@@ -20,7 +20,7 @@ JButton pointer = new JButton();
 public void run() {
 	int num = ran.nextInt(24);
 	panel = new JPanel();
-	pointer.setText(point);
+	
 	panel.add(pointer);
 	for(int i = 0; i<24; i++) {
 		JButton button = new JButton();
