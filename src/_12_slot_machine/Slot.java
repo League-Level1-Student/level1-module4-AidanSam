@@ -23,9 +23,9 @@ public class Slot {
 		frame.setVisible(true);
 		panel = new JPanel();
 		frame.add(panel);
-	int num = ran.nextInt(4);
-	int numb = rand.nextInt(4);
-	int numbe = rando.nextInt(4);
+	int num = ran.nextInt(3);
+	int numb = rand.nextInt(3);
+	int numbe = rando.nextInt(3);
 	JLabel label1 = new JLabel();
 	JLabel label2 = new JLabel();
 	JLabel label3 = new JLabel();
@@ -33,25 +33,25 @@ public class Slot {
 	panel.add(label2);
 	panel.add(label3);
 	
-if(num==1) {
+if(num==0) {
 label1.setIcon(createLabelImage("Untitled.png"));
-}else if(num==2) {
+}else if(num==1) {
 label1.setIcon(createLabelImage("Untitled2.png"));
-}else if(num==3) {
+}else if(num==2) {
 label1.setIcon(createLabelImage("Untitled3.png"));
 }
-if(numb==1) {
+if(numb==0) {
 label2.setIcon(createLabelImage("Untitled.png"));
-}else if(numb==2) {
+}else if(numb==1) {
 label2.setIcon(createLabelImage("Untitled2.png"));
-}else if(numb==3) {
+}else if(numb==2) {
 label2.setIcon(createLabelImage("Untitled3.png"));
 }
-if(numbe==1) {
+if(numbe==0) {
 label3.setIcon(createLabelImage("Untitled.png"));
-}else if(numbe==2) {
+}else if(numbe==1) {
 label3.setIcon(createLabelImage("Untitled2.png"));
-}else if(numbe==3) {
+}else if(numbe==2) {
 label3.setIcon(createLabelImage("Untitled3.png"));
 }
 frame.pack();
